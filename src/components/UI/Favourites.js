@@ -13,27 +13,17 @@ function Favourites(props) {
         .then(response => {
             console.log(response.data)
         })
-    },[])
+    },[props.city])
 
-    let [favouriteCity, setFavouriteCity] = useState([])
-    const [cityAdded, setCityAdded] = useState(false)
-
-    const handleFavourites = () => {
-        if(props.mainTemp!==''){
-            const updatedFavouriteCity = favouriteCity.push(props.city)
-            setCityAdded(true)
-            setFavouriteCity(...favouriteCity,updatedFavouriteCity)
-            console.log(favouriteCity)
-        }
-    }
+    
     return (
         <div>
-            <Button variant = 'contained' color = 'primary' onClick = {handleFavourites}>ADD TO FAVOURITES</Button>
-            {/* {
-                cityAdded ? 
+            <h1>Hello Favourites</h1>
+            {
+                props.cityAdded ? 
                     <ul>
                         {
-                    favouriteCity.map((fav) => {
+                    props.favouriteCity.map((fav) => {
                         //console.log(fav);
                         <li>{fav}</li>
                         
@@ -41,7 +31,7 @@ function Favourites(props) {
                 }
                     </ul>
                 : null
-            } */}
+            }
         </div>
     )
 }
