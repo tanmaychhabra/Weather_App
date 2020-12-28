@@ -1,0 +1,29 @@
+.card{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 5%;
+    
+}
+.desc{
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+}
+
+.temp_main{
+    display:flex;
+    justify-content: center;
+}
+
+.temp_min{
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+}
+
+.temp_max{
+    
+    display: flex;
+    justify-content: flex-end;
+}
